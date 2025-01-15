@@ -1,17 +1,25 @@
 class Buah:
-    def __init__(self, nama, warna, rasa):
+    def init(self, nama, warna, rasa):
         self.nama = nama
         self.warna = warna
         self.rasa = rasa
+    
+    def setNama(self, nama):
+        self.nama = nama
+    
+    def setWarna(self, warna):
+        self.warna = warna
+    
+    def setRasa(self, rasa):
+        self.rasa = rasa
+    
+    def information(self):
+        return f'Nama: {self.nama}, Warna: {self.warna}, Rasa: {self.rasa}'
 
-    def setNama(self,nama): self.nama = nama
-    def setWarna(self,warna): self.warna = warna
-    def setRasa(self,rasa): self.rasa = rasa
+buah1 = Buah ('Mangga', 'Jingga','Manis')
 
-# Contoh penggunaan
-buah = Buah("Apel", "Merah", "Manis")
-buah.setNama("Jeruk")
+buah1.setNama('Mangga')
+buah1.setWarna('Jingga')
+buah1.setRasa('Manis')
 
-print(Buah.setNama())
-print(Buah.setWarna())
-print(Buah.setRasa())
+print(buah1.information())
