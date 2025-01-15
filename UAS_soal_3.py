@@ -1,19 +1,15 @@
 class Queue:
     def _init_(self):
-        "Inisialisasi antrian kosong."
         self.items = []
 
     def is_empty(self):
-        "Memeriksa apakah antrian kosong."
         return len(self.items) == 0
 
     def enqueue(self, item):
-        "Menambahkan item ke dalam antrian (operasi Enqueue)."
         self.items.append(item)
         print(f"{item} berhasil ditambahkan ke dalam antrian.")
 
     def dequeue(self):
-        "Menghapus item dari antrian sesuai konsep FIFO (operasi Dequeue)."
         if self.is_empty():
             print("Antrian kosong. Tidak ada item untuk dihapus.")
             return None
