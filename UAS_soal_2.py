@@ -1,16 +1,38 @@
-import pandas as pd
+def array_2d_nilai():
+    jumlah_mahasiswa = 3
+    jumlah_mata_kuliah = 2
 
-df = pd.DataFrame({
-    'Algoritma dan struktur data 2': [90, 80, 65],
-    'Matematika numerik': [80, 60, 70]
-}, index = ['Mahasiswa 1','Mahasiswa 2','Mahasiswa 3'])
-print('tabell nilai mahasiswa')
-print(df)
+jumlah_mahasiswa = 3
+jumlah_mata_kuliah = 2
 
-df['Rata-rata'] = df.mean(axis=1)
-print('Rata-rata nilai mahasiswa')
-print(df)
+nilai_mahasiswa = [
+    [90,80],
+    [50,60],
+    [65,70]
+]
 
-print('Rata-rata nilai matkul')
-Rata_rata_matkul = df.mean(axis=0)
-print(Rata_rata_matkul)
+rata_rata_mata_kuliah = []
+for h in range(jumlah_mata_kuliah):
+    total_nilai = 0
+    for i in range(jumlah_mahasiswa):
+        total_nilai += nilai_mahasiswa[i][h]
+    rata_rata_mata_kuliah.append(total_nilai / jumlah_mahasiswa)
+
+rata_rata_mahasiswa = []
+for i in range(jumlah_mahasiswa):
+    total_nilai = 0
+    for j in range(jumlah_mata_kuliah):
+        total_nilai += nilai_mahasiswa[i][j]
+    rata_rata_mahasiswa.append(total_nilai / jumlah_mata_kuliah)
+
+print("Nilai Mahasiswa:")
+for i in range(jumlah_mahasiswa):
+    print(f"Mahasiswa {i+1}: {nilai_mahasiswa[i]}")
+
+print("Rata-rata per Mata Kuliah:")
+for i in range(jumlah_mata_kuliah):
+    print(f"Mata Kuliah {i+1}: {rata_rata_mata_kuliah[i]}")
+
+print("Rata-rata per Mahasiswa:")
+for i in range(jumlah_mahasiswa):
+    print(f"Mahasiswa {i+1}: {rata_rata_mahasiswa[i]}")
