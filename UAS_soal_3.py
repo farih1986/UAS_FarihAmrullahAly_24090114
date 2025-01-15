@@ -19,8 +19,8 @@ class Queue:
 
 while True:
     print("Menu:")
-    print("1. Tambahkan ke antrian (Enqueue)")
-    print("2. Hapus dari antrian (Dequeue)")
+    print("1. Tambahkan ke antrian")
+    print("2. Hapus dari antrian")
     print("3. Keluar")
 
 
