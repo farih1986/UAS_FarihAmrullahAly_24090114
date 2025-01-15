@@ -1,14 +1,17 @@
 data_mahasiswa = []
 
 def inputan():
-    nim = int(input('Masukan NIM    : '))
-    data_mahasiswa.append(nim)
-    nama = input('Masukan Nama  : ')
-    data_mahasiswa.append(nama)
+    mahasiswa = {}
+    mahasiswa['nim'] = int(input('Masukan NIM    : '))
+    mahasiswa['nama'] = input('Masukan Nama  : ')
+    data_mahasiswa.append(mahasiswa)
     
-inputan()
-tambah = input('ingin tambah lagi?(y/t) : ')
-if tambah == 'y':
+def tambah_input():
     inputan()
-else:
-    print(data_mahasiswa)
+    tambah = input('ingin tambah lagi?(y/t) : ')
+    if tambah == 'y':
+        tambah_input()
+    else:
+        print(data_mahasiswa)
+
+tambah_input()
